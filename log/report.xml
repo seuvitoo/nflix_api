@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="30" skipped="0" failures="0" errors="0" time="13.486202" timestamp="2019-11-15T01:00:17-03:00" hostname="DESKTOP-GLPFIH6">
+<properties>
+<property name="seed" value="45496"/>
+</properties>
+<testcase classname="spec.delete_spec" name="delete when a registered user is expected to eql &quot;204&quot;" file="./spec/delete_spec.rb" time="8.562718"></testcase>
+<testcase classname="spec.delete_spec" name="delete when  not exists is expected to eql &quot;404&quot;" file="./spec/delete_spec.rb" time="0.306338"></testcase>
+<testcase classname="spec.delete_spec" name="delete when wrong id is expected to eql &quot;412&quot;" file="./spec/delete_spec.rb" time="0.353835"></testcase>
+<testcase classname="spec.get_spec" name="get when a registered user is expected to eql &quot;200&quot;" file="./spec/get_spec.rb" time="0.332204"></testcase>
+<testcase classname="spec.get_spec" name="get when a registered user is expected to eql &quot;Galen Erso&quot;" file="./spec/get_spec.rb" time="0.351379"></testcase>
+<testcase classname="spec.get_spec" name="get when a registered user is expected to eql &quot;$2b$10$LucnIxi9sXP1f6bv5KGMo.SCc73wV6a/qU8P2OGG0u7fvVH256pU2&quot;" file="./spec/get_spec.rb" time="0.349114"></testcase>
+<testcase classname="spec.get_spec" name="get when a registered user is expected to eql &quot;sabine_wren@hotmail.com&quot;" file="./spec/get_spec.rb" time="0.359726"></testcase>
+<testcase classname="spec.get_spec" name="get when not found is expected to eql &quot;404&quot;" file="./spec/get_spec.rb" time="0.320030"></testcase>
+<testcase classname="spec.get_spec" name="get when wrong id is expected to eql &quot;412&quot;" file="./spec/get_spec.rb" time="0.341444"></testcase>
+<testcase classname="spec.get_spec" name="get when other id is expected to eql &quot;401&quot;" file="./spec/get_spec.rb" time="0.470232"></testcase>
+<testcase classname="spec.post_spec" name="post when create a new user is expected to eql &quot;200&quot;" file="./spec/post_spec.rb" time="0.169009"></testcase>
+<testcase classname="spec.post_spec" name="post when email is wrong is expected to eql &quot;412&quot;" file="./spec/post_spec.rb" time="0.024833"></testcase>
+<testcase classname="spec.post_spec" name="post when email is wrong is expected to eql &quot;Oops. You entered a wrong email.&quot;" file="./spec/post_spec.rb" time="0.035866"></testcase>
+<testcase classname="spec.post_spec" name="post when empty name is expected to eql &quot;412&quot;" file="./spec/post_spec.rb" time="0.025211"></testcase>
+<testcase classname="spec.post_spec" name="post when empty name is expected to eql &quot;Validation notEmpty on full_name failed&quot;" file="./spec/post_spec.rb" time="0.027463"></testcase>
+<testcase classname="spec.post_spec" name="post when empty email is expected to eql &quot;412&quot;" file="./spec/post_spec.rb" time="0.034842"></testcase>
+<testcase classname="spec.post_spec" name="post when empty email is expected to eql &quot;Validation notEmpty on email failed&quot;" file="./spec/post_spec.rb" time="0.039893"></testcase>
+<testcase classname="spec.post_spec" name="post when empty password is expected to eql &quot;412&quot;" file="./spec/post_spec.rb" time="0.025460"></testcase>
+<testcase classname="spec.post_spec" name="post when empty password is expected to eql &quot;Validation notEmpty on password failed&quot;" file="./spec/post_spec.rb" time="0.025889"></testcase>
+<testcase classname="spec.post_spec" name="post when has duplicate email is expected to eql &quot;409&quot;" file="./spec/post_spec.rb" time="0.300871"></testcase>
+<testcase classname="spec.post_spec" name="post when has duplicate email is expected to eql &quot;Oops. Looks like you already have an account with this email address.&quot;" file="./spec/post_spec.rb" time="0.303782"></testcase>
+<testcase classname="spec.post_spec" name="post when user name is null is expected to eql &quot;412&quot;" file="./spec/post_spec.rb" time="0.025035"></testcase>
+<testcase classname="spec.post_spec" name="post when user name is null is expected to eql &quot;Users.full_name cannot be null&quot;" file="./spec/post_spec.rb" time="0.028244"></testcase>
+<testcase classname="spec.post_spec" name="post when user email is null is expected to eql &quot;412&quot;" file="./spec/post_spec.rb" time="0.018316"></testcase>
+<testcase classname="spec.post_spec" name="post when user email is null is expected to eql &quot;Users.email cannot be null&quot;" file="./spec/post_spec.rb" time="0.026090"></testcase>
+<testcase classname="spec.post_spec" name="post when user password is null is expected to eql &quot;412&quot;" file="./spec/post_spec.rb" time="0.027591"></testcase>
+<testcase classname="spec.post_spec" name="post when user password is null is expected to eql &quot;Users.password cannot be null&quot;" file="./spec/post_spec.rb" time="0.024521"></testcase>
+<testcase classname="spec.put_spec" name="put when a registered user is expected to eql &quot;200&quot;" file="./spec/put_spec.rb" time="0.000250"></testcase>
+<testcase classname="spec.put_spec" name="put when a registered user is expected to eql &quot;Victor dos Santos&quot;" file="./spec/put_spec.rb" time="0.000449"></testcase>
+<testcase classname="spec.put_spec" name="put when a registered user is expected to eql &quot;vy.santos@live.com&quot;" file="./spec/put_spec.rb" time="0.000335"></testcase>
+</testsuite>

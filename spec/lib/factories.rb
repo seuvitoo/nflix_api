@@ -1,4 +1,5 @@
-require_relative "models/user_model"
+require "faker"
+require_relative "../models/user_model"
 
 FactoryBot.define do
   factory :user, class: UserModel do
@@ -37,11 +38,12 @@ FactoryBot.define do
 
   factory :registered_user, class: UserModel do
     id { 0 }
-    full_name { "Anakin Skywalker" }
-    email { "anaki@jedi.com" }
+    full_name { Faker::Movies::StarWars.character }
+    email { Faker::Internet.free_email(name: full_name) }
     password { "darthvader" }
 
     after (:build) do |user|
+      #puts "apagando o email" + user.email
       Database.new.delete_user(user.email)
       result = ApiUser.save(user.to_hash)
       user.id = result.parsed_response["id"]

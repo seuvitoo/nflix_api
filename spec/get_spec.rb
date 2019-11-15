@@ -7,5 +7,34 @@ describe "get" do
 
     it { expect(result.response.code).to eql "200" }
     it { expect(result.parsed_response["full_name"]).to eql user_data["full_name"] }
+    it { expect(result.parsed_response["password"]).to eql user_data["password"] }
+    it { expect(result.parsed_response["email"]).to eql user_data["email"] }
+    #it { expect(result.parsed_response["email"]).to eql user_data["created_at"] }
+    #it { expect(result.parsed_response["email"]).to eql user_data["updated_at"] }
+  end
+
+  context "when not found" do
+    let(:user) { build(:registered_user) }
+    let(:token) { ApiUser.token(user.email, user.password) }
+    let(:result) { ApiUser.find(token, "0") }
+
+    it { expect(result.response.code).to eql "404" }
+  end
+
+  context "when wrong id" do
+    let(:user) { build(:registered_user) }
+    let(:token) { ApiUser.token(user.email, user.password) }
+    let(:result) { ApiUser.find(token, "abc123") }
+
+    it { expect(result.response.code).to eql "412" }
+  end
+
+  context "when other id" do #id diferente do ID em que o token foi gerado
+    let(:user) { build(:registered_user) }
+    let(:other_user) { build(:registered_user) }
+    let(:token) { ApiUser.token(user.email, user.password) }
+    let(:result) { ApiUser.find(token, other_user.id) }
+
+    it { expect(result.response.code).to eql "401" }
   end
 end
