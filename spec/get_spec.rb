@@ -9,8 +9,8 @@ describe "get" do
     it { expect(result.parsed_response["full_name"]).to eql user_data["full_name"] }
     it { expect(result.parsed_response["password"]).to eql user_data["password"] }
     it { expect(result.parsed_response["email"]).to eql user_data["email"] }
-    #it { expect(result.parsed_response["email"]).to eql user_data["created_at"] }
-    #it { expect(result.parsed_response["email"]).to eql user_data["updated_at"] }
+    it { expect(result.parsed_response["createdAt"]).to eql user_data["created_at"] }
+    it { expect(result.parsed_response["updatedAt"]).to eql user_data["updated_at"] }
   end
 
   context "when not found" do

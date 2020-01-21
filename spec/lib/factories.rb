@@ -38,7 +38,7 @@ FactoryBot.define do
 
   factory :registered_user, class: UserModel do
     id { 0 }
-    full_name { Faker::Movies::StarWars.character }
+    full_name { Faker::Movies::HarryPotter.character }
     email { Faker::Internet.free_email(name: full_name) }
     password { "darthvader" }
 
